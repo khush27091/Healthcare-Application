@@ -8,7 +8,7 @@ const authRoutes = require('./routes/authRoutes');
 const onboardingRoutes = require('./routes/onboardingRoutes');
 const chatRoutes = require('./routes/chatRoutes');
 const doctorRoutes = require("./routes/doctorRoutes");
-
+const patientRoutes = require("./routes/patientRoutes");
 
 
 const app = express();
@@ -33,6 +33,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/onboarding', onboardingRoutes);
 app.use('/api/chat', chatRoutes);
 app.use("/api/doctors", doctorRoutes);
+app.use("/api/patients", patientRoutes);
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
